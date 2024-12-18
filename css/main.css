@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Schoolbell&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+:root {
+    --MainColor: #145e76;
+    --LinkTextColor: #A1B5BB;
+    --White:#FFFFFF;
+    --Inter: Inter;
+    --Schoolbell: Schoolbell;
+    --BtnBackground: #10546B;
+    --Yellow: #FFA63A;
+}
+
+
+/* Main section style */
+main {
+    background: url('../images/background.png');
+    background-position: center;
+    background-size: 60px;
+    background-color: var(--MainColor);
+}
+
+.header-logo {
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+ul li {
+    list-style: none;
+    position: relative;
+}
+
+ul li a {
+    color: var(--LinkTextColor);
+    font-size: 18px;
+    font-family: var(--Inter);
+    font-weight: 400;
+    padding: 3px 0;
+    transition: all .6s;
+}
+
+ul li a:hover {
+    color: var(--White);
+}
+
+ul li a::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    background-color: var(--White );
+    transform: scaleX(0);
+    top: 23px;
+    left: 0;
+    transition: all .6s;
+}
+
+.home-link::after {
+    width: 54px;
+    left: -2px;
+}
+
+.about-link::after {
+    width: 56px;
+    left: -3px;
+}
+
+.service-link::after {
+    width: 66px;
+    left: -1px;
+}
+
+.portfolio-link::after {
+    width: 72px;
+    left: -1px;
+}
+
+.blog-link::after {
+    width: 40px;
+    left: -1px;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+nav .contact-btn {
+    color: var(--White);
+    font-size: 18px;
+    font-family: var(--Inter);
+    font-weight: 500;
+    padding: 12px 24px;
+    background-color: var(--BtnBackground);
+    border-radius: 25px;
+    transition: all .6s;
+}
+
+nav .contact-btn:hover {
+    background-color: var(--Yellow);
+}
+
+
+
+/* Main content style */
+.main-content {
+    display: flex;
+    padding-top: 120px;
+    padding-bottom: 230px;
+}
+
+.main__text-box {
+    width: 550px;
+}
+
+.main__image-box {
+    position: relative;
+}
+
+.main__image-box img {
+    position: absolute;
+    top: 20px;
+    left: 160px;
+    transform: scale(1.3, 1.3);
+}
+
+.main__text-box .greeting-text {
+    display: inline-block;
+    font-family: var(--Schoolbell);
+    color: var(--White);
+    font-size: 24px;
+    font-weight: 400;
+    padding: 12px 24px;
+    background-color: var(--BtnBackground);
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.main__text-box .main-title {
+    font-family: var(--Inter);
+    font-size: 60px;
+    color: var(--White);
+    margin-bottom: 30px;
+}
+
+.main__text-box .main-subtitle {
+    font-family: var(--Inter);
+    color: var(--LinkTextColor);
+    margin-bottom: 30px;
+}
+
+.main-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.main-buttons a {
+    color: var(--White);
+    padding: 12px 24px;
+    border-radius: 30px;
+    background-color: var(--BtnBackground);
+    transition: all .6s;
+}
+
+.main-buttons a:hover {
+    background-color: var(--Yellow);
+}
+
+
+/* Statistics section */
+.statistics {
+    width: 1100px;
+    height: 270px;
+    background-color:var(--White);
+    border-radius: 30px;
+    padding: 20px;
+    position: absolute;
+    top: 730px;
+    left: 210px;
+}
+
+.statistics .statistics-title {
+    text-align: center;
+    font-family: var(--Inter);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--BtnBackground);
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.statistics-items {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.statistics-items .statistics-item {
+    padding: 20px;
+}
+
+.statistics-item h3 {
+    font-family: var(--Inter);
+    font-size: 44px;
+    color: var(--BtnBackground);
+    text-align: center;
+}
+
+.statistics-item p {
+    font-family: var(--Inter);
+    color: var(--BtnBackground);
+}
+
+
+
+
+/* Services section */
+.services {
+    padding-top: 300px;
+}
+
+.services-title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services-title-top {
+    display: inline-block;
+    font-family: var(--Schoolbell);
+    font-size: 20px;
+    color: var(--BtnBackground);
+    border-bottom: 2px solid var(--BtnBackground);
+    margin: 0 auto;
+}
