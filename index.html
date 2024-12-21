@@ -14,6 +14,9 @@
   <body>
     <!-- Main section -->
     <main>
+      <div class="load">
+        <img src="./images/Magnify@1x-1.4s-200px-200px.gif" alt="">
+      </div>
       <header>
         <div class="container">
           <nav>
@@ -21,11 +24,11 @@
               <img src="./images/header-logo.png" alt="Header logo" />
             </div>
             <ul>
-              <li><a class="home-link" href="">Home</a></li>
-              <li><a class="about-link" href="">About</a></li>
-              <li><a class="service-link" href="">Service</a></li>
-              <li><a class="portfolio-link" href="">Portfolio</a></li>
-              <li><a class="blog-link" href="">Blog</a></li>
+              <li><a class="home-link" href="./index.html">Home</a></li>
+              <li><a class="about-link" href="#about">About</a></li>
+              <li><a class="service-link" href="#service">Service</a></li>
+              <li><a class="portfolio-link" href="#portfolio">Portfolio</a></li>
+              <li><a class="blog-link" href="#blog">Blog</a></li>
             </ul>
             <a href="#" class="contact-btn">Contact</a>
           </nav>
@@ -82,7 +85,7 @@
     <!-- Statistics section -->
 
     <!-- Services section -->
-    <section class="services">
+    <section class="services" id="service">
       <div class="container">
         <div class="services-title-box">
             <p class="services-title-top">Services</p>
@@ -138,7 +141,7 @@
 
 
     <!-- Featured-Portfolio section -->
-    <section class="featured-portfolio">
+    <section class="featured-portfolio" id="portfolio">
       <div class="container">
         <h1 class="featured-portfolio__title">Featured my portfolio</h1>
       <p class="featured-portfolio__subtitle">
@@ -201,7 +204,7 @@
 
 
     <!-- About section -->
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about-content">
           <div class="about-image-box">
@@ -226,7 +229,7 @@
     <!-- /About section -->
 
     <!-- Footer section -->
-    <section class="footer">
+    <section class="footer" id="blog">
       <div class="container">
         <div class="footer-content">
           <div class="footer-left">
@@ -277,5 +280,17 @@
       </div>
     </section>
     <!-- /Footer section -->
+
+
+    <script>
+      let load = document.querySelector(".load");
+      window.addEventListener("load", () => {
+        load.classList.remove("load-none");
+      });
+
+      setTimeout(() => {
+        load.classList.add("load-none");
+      }, 700);
+    </script>
   </body>
 </html>
